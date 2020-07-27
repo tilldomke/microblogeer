@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/codahale/bcrypt-ruby.git
+  revision: 9f3fb05ba7b3732a87e0305ec635d7773bf1fafb
+  specs:
+    bcrypt (3.1.15)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -61,7 +67,6 @@ GEM
     ansi (1.5.0)
     autoprefixer-rails (9.8.5)
       execjs
-    bcrypt (3.1.13)
     bindex (0.8.1)
     bootsnap (1.4.6)
       msgpack (~> 1.0)
@@ -241,7 +246,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bcrypt (= 3.1.13)
+  bcrypt!
   bootsnap (= 1.4.6)
   bootstrap-sass (= 3.4.1)
   byebug (= 11.1.3)
