@@ -21,4 +21,20 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_select 'div#error_explanation'
   end
 
+  test "valid signup" do
+   assert_difference "User.count" do
+     post users_path, params: {
+       user: {
+        name: "Example Boy",
+        email: "user@derp.com",
+        password: "password",
+        password_confirmation: "password"
+       }
+     }
+   end
+  follow_redirect! #to make the redirect defined in the controller work in test
+  assert_template "users/show"
+  assert_not flash.empty?
+  end
+
 end
