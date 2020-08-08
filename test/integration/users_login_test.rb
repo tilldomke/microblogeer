@@ -9,13 +9,13 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     @user = users(:microblogeer)
   end
 
-  test "invalid login" do 
+  test "invalid paword/valid email" do 
     get login_path
     assert_template "sessions/new"
 
     post login_path, params: {
       session:{
-        email: "",
+        email: @user.email,
         password: ""
       }
     }

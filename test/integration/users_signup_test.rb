@@ -35,6 +35,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
   follow_redirect! #to make the redirect defined in the controller work in test
   assert_template "users/show"
   assert_not flash.empty?
+  assert is_logged_in?
   end
 
 end
